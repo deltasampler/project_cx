@@ -11,6 +11,7 @@ add_compile_definitions(ROOT_PATH="${CMAKE_CURRENT_SOURCE_DIR}/")
 add_compile_definitions(PROJECT_PATH="${CMAKE_CURRENT_SOURCE_DIR}/project/")
 
 find_package(SDL3 REQUIRED CONFIG)
+add_subdirectory("modules/cl")
 add_subdirectory("modules/gl")
 add_subdirectory("modules/imgui")
 add_subdirectory("modules/examples")
