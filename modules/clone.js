@@ -1,6 +1,6 @@
-import subprocess
+const {execSync} = require("child_process");
 
-commands = [
+const commands = [
     "git clone git@deltasampler:deltasampler/cl_cx.git cl",
     "git clone git@deltasampler:deltasampler/engine_cx.git engine",
     "git clone git@deltasampler:deltasampler/examples.git",
@@ -8,5 +8,10 @@ commands = [
     "git clone git@deltasampler:deltasampler/imgui_cx.git imgui"
 ];
 
-for command in commands:
-    subprocess.run(command, shell=True, check=True)
+for (const command of commands) {
+    try {
+        execSync(command, {stdio: "inherit", shell: true});
+    } catch (error) {
+        console.error(error.message);
+    }
+}

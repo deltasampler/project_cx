@@ -4,4 +4,4 @@
 .vscode/
 out/
 modules/*
-!modules/clone.py
+!modules/clone.js
