@@ -14,3 +14,7 @@ target_link_libraries(project examples)
 if(CMAKE_VERSION VERSION_GREATER 3.12)
     set_property(TARGET project PROPERTY CXX_STANDARD 20)
 endif()
+
+# set_source_files_properties(source/main.cpp
+#     PROPERTIES COMPILE_FLAGS "-E"
+# )
