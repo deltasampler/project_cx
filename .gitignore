@@ -3,5 +3,3 @@
 .vs/
 .vscode/
 out/
-modules/*
-!modules/clone.js
